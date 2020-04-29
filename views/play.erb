@@ -2,6 +2,9 @@
   .names { text-align: center}
 </style>
 <div class='names'>
-  <h1><%= @player_1 %> vs. <%= @player_2 %></h1>
-  <h2><%= @player_2 %>: 60HP</h2>
+  <h1><%= @player_1_name %> vs. <%= @player_2_name %></h1>
+  <h2><%= @player_2_name %>: 60HP</h2>
+  <form action='/attack'>
+    <input type="submit" value="Attack">
+  </form>
 </div>
