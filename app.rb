@@ -1,9 +1,9 @@
 require 'sinatra/base'
 require './lib/player'
+require './lib/game'
 # require "securerandom"
 
 class Battle < Sinatra::Base
-  # enable :sessions
   # set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64)}
 
   get '/' do
@@ -25,7 +25,7 @@ class Battle < Sinatra::Base
   get '/attack' do
     @player_1_name = $player_1
     @player_2_name = $player_2
-    @player_1_name.attack(@player_2_name)
+    Game.new.attack(@player_2_name)
     erb :attack
   end
   # start the server if ruby file executed directly
