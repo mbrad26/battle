@@ -5,6 +5,7 @@ group :test do
   gem 'sinatra'
   gem 'capybara'
   gem 'pry'
+  gem 'shotgun'
   # gem 'selenium-webdriver'
   # gem 'shotgun'
 end
